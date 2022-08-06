@@ -1,0 +1,152 @@
+/*
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+                    /* HTML, Body */
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+                    /* Card Styles */
+.card {
+    width: 325px;
+    height: 440px;
+    transition: 500ms;
+    margin-right: 23px;
+    margin-left: 23px;
+}
+.card1 {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 8px 8px 0 0;
+    margin-top: 85px;
+}
+.card2 {
+    background-color: hsl(184, 100%, 22%);
+}
+.card3 {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 85px;
+}
+                    /* Details (Heading, Paragraph, Button */
+.details {
+    padding: 48px;
+}
+/* Heading */
+.details h1 {
+    font-family: "Big Shoulders Display";
+    font-size: 2.3rem;
+    color: hsl(0, 0%, 95%);
+    letter-spacing: 0.1rem;
+    margin-top: 29.5px;
+    margin-bottom: 28px;
+}
+/* Paragraph */
+.details p {
+    font-family: "Lexend Deca";
+    line-height: 1.52rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+/* Button */
+.details button {
+    font-family: "Lexend Deca";
+    font-size: 0.9rem;
+    width: 145px;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.7rem;
+    background-color: hsl(0, 0%, 95%);
+}
+/* Customizing Button Text Colors */
+.card1 .details button {
+    color: hsl(31, 77%, 52%);
+    transition: 300ms;
+}
+.card2 .details button {
+    color: hsl(184, 100%, 22%);
+    transition: 300ms;
+}
+.card3 .details button {
+    color: hsl(179, 100%, 13%);
+    transition: 300ms;
+}
+.card1 .details button:hover {
+    background-color: hsl(31, 77%, 52%);
+    border: 3px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+}
+.card2 .details button:hover {
+    background-color: hsl(184, 100%, 22%);
+    border: 3px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+}
+.card3 .details button:hover {
+    background-color: hsl(179, 100%, 13%);
+    border: 3px solid hsl(0, 0%, 95%);
+    color: hsl(0, 0%, 95%);
+}
+/* Responsive */
+@media screen and (min-width : 950px) {
+                            /* Card Styles */
+    .card-container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        min-height: 100vh;
+    }
+    .card {
+        width: 305px;
+        height: 500px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .card1 {
+        border-radius: 8px 0px 0px 8px;
+        margin-top: 0px;
+    }
+    .card2 {
+    }
+    .card3 {
+        border-radius: 0px 8px 8px 0px;
+        margin-bottom: 0px;
+    }
+                        /* Details (Heading, Paragraph, Button */
+    .details {
+        padding: 48px;
+    }
+    /* Heading */
+    .details h1 {
+        font-size: 2.3rem;
+        margin-top: 29.5px;
+        margin-bottom: 28px;
+    }
+    /* Paragraph */
+    .details p {
+        line-height: 1.52rem;
+    }
+    /* Button */
+    .details button {
+        font-size: 0.9rem;
+        width: 145px;
+        height: 50px;
+        border-radius: 40px;
+        margin-top: 4.3rem;
+    }
+}
